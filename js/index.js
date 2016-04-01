@@ -1,14 +1,20 @@
+//Variables - argen
 var argent;
 var pointage;
 
-var button = document.getElementById("b");
-
+//DOM
 argent = document.getElementById("a").textContent;
 
-function nButton() {
+//Créer un bouton
+function nButton(nombre) {
     var btn = document.createElement("BUTTON");
     btn.className = "bu";
+    btn.id = "b" + nombre;
     document.getElementById("serie").appendChild(btn);
 }
 
-button.addEventListener("click", nButton);
+function rButton(nombre) {
+    var parent = document.getElementById("serie");
+    var child = document.getElementById("b" + nombre);
+    parent.removeChild(child);
+}
