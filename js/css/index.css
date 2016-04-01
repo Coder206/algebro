@@ -1,0 +1,9 @@
+.bu {
+    height: 150px;
+    width: 100px;
+    margin: 15px;
+}
+
+#a {
+    display: none;
+}
