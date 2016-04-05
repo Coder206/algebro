@@ -26,7 +26,7 @@ function rButton(nombre) {
     parent.removeChild(child);
 }
 function start() {
-
+alert("Hello");
 }
 function detect() {
   if (argent > 100) {
