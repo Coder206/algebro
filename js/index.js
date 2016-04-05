@@ -1,38 +1,44 @@
 //Variables - argent
 var a;
 var argent;
-var pointage;
+var pointage = 1;
 
 //Variables - jeu
 var tours;
 
 //DOM
 a = document.getElementById("a").textContent;
+sys = document.getElementById("sys");
+serie = document.getElementById("serie");
 
 //Défini argent
-argent = a * pointage;
+argent = a;
+pointage = a * 100;
 
 //Créer un bouton
 function nButton(nombre) {
     var btn = document.createElement("BUTTON");
     btn.className = "bu";
     btn.id = "b" + nombre;
-    document.getElementById("serie").appendChild(btn);
+    serie.appendChild(btn);
 }
 //Enlèver un boutton
 function rButton(nombre) {
-    var parent = document.getElementById("serie");
+    var parent = serie.getElementById("serie");
     var child = document.getElementById("b" + nombre);
     parent.removeChild(child);
 }
 function start() {
-alert("Hello");
+    
 }
 function detect() {
-  if (argent > 100) {
+  if (pointage > 100) {
     start();
   }
-
+  else {
+     
   }
 
 }
+
+window.addEventListener("load", detect);
