@@ -47,28 +47,16 @@ function rnd() {
 function start() {
     rnd();
 }
-function detect() {
+function trigger() {
     if (pointage > 100) {
         start();
     }
     else {
 
     }
-
+    
 }
+
+addEventListener("click", rButton)
 
 window.addEventListener("load", initUI);
-
-/*
-
-var deleteLink = document.querySelectorAll('.delete');
-
-for (var i = 0; i < deleteLink.length; i++) {
-    deleteLink[i].addEventListener('click', function(event) {
-        if (!confirm("sure u want to delete " + this.title)) {
-            event.preventDefault();
-        }
-    });
-}
-
-*/
