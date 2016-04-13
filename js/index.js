@@ -58,3 +58,17 @@ function detect() {
 }
 
 window.addEventListener("load", initUI);
+
+/*
+
+var deleteLink = document.querySelectorAll('.delete');
+
+for (var i = 0; i < deleteLink.length; i++) {
+    deleteLink[i].addEventListener('click', function(event) {
+        if (!confirm("sure u want to delete " + this.title)) {
+            event.preventDefault();
+        }
+    });
+}
+
+*/
