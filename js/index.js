@@ -39,24 +39,22 @@ function initUI() {
     numr = 50;
     nButton(numr);
 }
-
+//Choisi un nombre entier entre 1 et tours
 function rnd() {
+    alert();
     numr = Math.floor((Math.random() * tours) + 1);
 }
-
+//Commence 
 function start() {
     rnd();
 }
+//
 function trigger() {
-    if (pointage > 100) {
+    if (pointage >= 100)
         start();
     }
-    else {
 
-    }
-    
-}
 
-addEventListener("click", rButton)
+addEventListener("click", nButton)
 
 window.addEventListener("load", initUI);
