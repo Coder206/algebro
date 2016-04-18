@@ -38,6 +38,7 @@ function initUI() {
     nButton();
     numr = 50;
     nButton(numr);
+    trigger();
 }
 //Choisi un nombre entier au hazard entre 1 et tours
 function rnd() {
@@ -54,8 +55,15 @@ function trigger() {
         start();
     }
 }
+function con() {
+    var x = document.querySelectorAll(".bu");
+    var i;
+    for (i = 0; i < x.length; i++) {
+        x[i].style.backgroundColor = "red";
+    }
+}
 
 
-addEventListener("click", nButton)
+document.querySelectorAll(".bu").addEventListener("click.", con)
 
 window.addEventListener("load", initUI);

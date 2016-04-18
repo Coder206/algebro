@@ -24,7 +24,7 @@ function perdant() {
     //Multiplier la valeur par 0.45
     argent = argent * 0.45
     //Soustraire ce résultat à la valeur d'argent précédente
-    
+
     //Pas d'argent?
     if (argent <= 0) {
         sys = "Fermer";
