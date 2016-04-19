@@ -18,15 +18,22 @@ pointage = a * 100;
 
 //Créer un bouton
 function nButton(nombre) {
-    for (var i = tours; i < nombre; i++) {
+    for (var i = 0; i < tours; i++){
+    if (i === numr){
+        var btn = document.createElement("BUTTON");
+        btn.className = "x";
+        btn.id = "b" + i;
+        serie.appendChild(btn);
+      }
+      else {
         var btn = document.createElement("BUTTON");
         btn.className = "bu";
         btn.id = "b" + i;
-        btn.textContent = "X";
         serie.appendChild(btn);
-        tours = i + 1;
+      }
     }
 }
+
 //Enlèver un boutton
 function rButton(nombre) {
     var parent = serie.getElementById("serie");
@@ -35,15 +42,15 @@ function rButton(nombre) {
 }
 
 function initUI() {
-    nButton();
-    numr = 50;
+    tours = 20;
+    rnd();
     nButton(numr);
     trigger();
 }
 //Choisi un nombre entier au hazard entre 1 et tours
 function rnd() {
-    alert("Please work");
     numr = Math.floor((Math.random() * tours) + 1);
+
 }
 //Commence rnd
 function start() {
