@@ -14,7 +14,7 @@ function gagnant() {
     if (confirm("Voulez-vous essayer vos chances encore?") == true) {
         sys = "Charger";
     } else {
-        sys = "Fermer";
+        sys = "gagnant";
     }
 }
 
@@ -23,14 +23,17 @@ function perdant() {
     argent = argent * 0.45
     //Pas d'argent?
     if (argent <= 0) {
-        sys = "Fermer";
+        sys = "perdant";
     }
     else {
         //Décision continuer
         if (confirm("Voulez-vous essayer vos chances encore?") == true) {
             sys = "Charger";
         } else {
-            sys = "Fermer";
+            sys = "perdant";
         }
     }
 }
+
+document.querySelector(".x").addEventListener("click", gagnant);
+document.querySelectorAll(".bu").addEventListener("click", gagnant);
