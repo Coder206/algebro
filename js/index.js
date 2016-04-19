@@ -55,15 +55,6 @@ function trigger() {
         start();
     }
 }
-function con() {
-    var x = document.querySelectorAll(".bu");
-    var i;
-    for (i = 0; i < x.length; i++) {
-        x[i].style.backgroundColor = "red";
-    }
-}
 
-
-document.querySelectorAll(".bu").addEventListener("click.", con)
 
 window.addEventListener("load", initUI);
