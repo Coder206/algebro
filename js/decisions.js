@@ -9,9 +9,7 @@ var argent;
 
 function gagnant() {
     //Multiplier la valeur par 0.4
-
-    //Ajouter ce résultat à la valeur d'argent précédente
-
+    argent = argent * 0.4
     //Décision continuer
     if (confirm("Voulez-vous essayer vos chances encore?") == true) {
         sys = "Charger";
@@ -23,8 +21,6 @@ function gagnant() {
 function perdant() {
     //Multiplier la valeur par 0.45
     argent = argent * 0.45
-    //Soustraire ce résultat à la valeur d'argent précédente
-
     //Pas d'argent?
     if (argent <= 0) {
         sys = "Fermer";
