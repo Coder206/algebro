@@ -4,7 +4,7 @@ var argent;
 var pointage = 1;
 
 //Variables - jeu
-var tours = 0;
+var tours = 3;
 var numr;
 
 //DOM
