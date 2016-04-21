@@ -42,7 +42,6 @@ function rButton(nombre) {
 }
 
 function initUI() {
-    tours = 20;
     rnd();
     nButton(numr);
     trigger();
@@ -84,8 +83,9 @@ function gagnant() {
     //Décision continuer
     if (confirm("Voulez-vous essayer vos chances encore?") == true) {
         sys = "Charger";
+        tours++;
     } else {
-        sys = "gagnant";
+        sys = "Fermer";
     }
 }
 
@@ -94,14 +94,15 @@ function perdant() {
     argent = argent * 0.45
     //Pas d'argent?
     if (argent <= 0) {
-        sys = "perdant";
+        sys = "Fermer";
+        tours--;
     }
     else {
         //Décision continuer
         if (confirm("Voulez-vous essayer vos chances encore?") == true) {
             sys = "Charger";
         } else {
-            sys = "perdant";
+            sys = "Fermer";
         }
     }
 }
