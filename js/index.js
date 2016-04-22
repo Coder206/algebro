@@ -1,3 +1,4 @@
+
 //Variables - argent
 var a;
 var argent;
@@ -18,19 +19,21 @@ pointage = a * 100;
 
 //Créer un bouton
 function nButton(nombre) {
-    for (var i = 0; i < tours; i++){
-    if (i === numr){
-        var btn = document.createElement("BUTTON");
-        btn.className = "x";
-        btn.id = "b" + i;
-        serie.appendChild(btn);
-      }
-      else {
-        var btn = document.createElement("BUTTON");
-        btn.className = "bu";
-        btn.id = "b" + i;
-        serie.appendChild(btn);
-      }
+    for (var i = 0; i < tours; i++) {
+        if (i === numr) {
+            var btn = document.createElement("BUTTON");
+            btn.className = "x";
+            btn.id = "b" + i;
+            serie.appendChild(btn);
+            btn.onclick = ver();
+        }
+        else {
+            var btn = document.createElement("BUTTON");
+            btn.className = "bu";
+            btn.id = "b" + i;
+            serie.appendChild(btn);
+            btn.onclick = ver();
+        }
     }
 }
 
@@ -48,7 +51,7 @@ function initUI() {
 }
 //Choisi un nombre entier au hazard entre 1 et tours
 function rnd() {
-    numr = Math.floor((Math.random() * tours) + 1);
+    numr = Math.floor((Math.random() * tours) + 0);
 
 }
 //Commence rnd
@@ -57,7 +60,7 @@ function start() {
 }
 //Commence start si pointage et plus grand ou égal à 100
 function trigger() {
-    if (pointage >= 100){
+    if (pointage >= 100) {
         start();
     }
 }
@@ -84,6 +87,9 @@ function gagnant() {
     if (confirm("Voulez-vous essayer vos chances encore?") == true) {
         sys = "Charger";
         tours++;
+        numr++;
+        initUI();
+
     } else {
         sys = "Fermer";
     }
@@ -96,6 +102,8 @@ function perdant() {
     if (argent <= 0) {
         sys = "Fermer";
         tours--;
+        numr--;
+        initUI();
     }
     else {
         //Décision continuer
@@ -107,5 +115,35 @@ function perdant() {
     }
 }
 
+
+/*
 document.querySelector(".x").addEventListener("click", gagnant);
 document.querySelectorAll(".bu").addEventListener("click", gagnant);
+$(function () {
+    $("button").click(function () {
+        if ($(this).hasClass("x")) {
+            alert("hi");
+            $(this).removeClass("x");
+            $(this).addClass("bu");
+            gagnant();
+            nButton(1);
+            //Insert logic if you want a type of optional click/off click code
+        }
+        else {
+            alert("bye")
+            //Sélectionne autre
+            perdant();
+            rButton(1);
+        }
+    })
+});
+*/
+//Verification
+function ver() {
+    if (this.className = "x") {
+        gagnant();
+    }
+    else {
+        perdant();
+    }
+}
