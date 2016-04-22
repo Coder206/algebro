@@ -72,27 +72,28 @@ window.addEventListener("load", initUI);
 //Decisions js
 
 //DOM
-var a = document.getElementById("a").textContent;
-var sys = document.getElementById("sys");
-var serie = document.getElementById("serie");
+//var a = document.getElementById("a").textContent;
+//var sys = document.getElementById("sys");
+//var serie = document.getElementById("serie");
 
 //Valeurs
-var oargent;
+//var oargent;
 var argent;
 
 function gagnant() {
     //Multiplier la valeur par 0.4
     argent = argent * 0.4
     //Décision continuer
-    if (confirm("Voulez-vous essayer vos chances encore?") == true) {
-        sys = "Charger";
+    
+var r = confirm("Voulez-vous essayer vos chances encore?");
+if (r == true) {
+            sys = "Charger";
         tours++;
         numr++;
         initUI();
-
-    } else {
-        sys = "Fermer";
-    }
+} else {
+            sys = "Fermer";
+}
 }
 
 function perdant() {
@@ -101,17 +102,20 @@ function perdant() {
     //Pas d'argent?
     if (argent <= 0) {
         sys = "Fermer";
-        tours--;
-        numr--;
-        initUI();
+
     }
     else {
         //Décision continuer
-        if (confirm("Voulez-vous essayer vos chances encore?") == true) {
+var r = confirm("Voulez-vous essayer vos chances encore?");
+if (r == true) {
             sys = "Charger";
-        } else {
+                tours--;
+        numr--;
+        initUI();
+} else {
             sys = "Fermer";
-        }
+}
+}
     }
 }
 
