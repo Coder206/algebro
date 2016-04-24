@@ -66,9 +66,6 @@ function trigger() {
 }
 
 
-window.addEventListener("load", initUI);
-
-
 //Decisions js
 
 //DOM
@@ -151,3 +148,6 @@ function ver() {
         perdant();
     }
 }
+
+window.addEventListener("load", initUI);
+document.querySelectorAll("BUTTON", ver)
