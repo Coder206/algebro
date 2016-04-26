@@ -16,22 +16,22 @@ serie = document.getElementById("serie");
 argent = a;
 pointage = a * 100;
 
-$(document).ready(function(){
-
+//http://stackoverflow.com/questions/20253246/adding-click-event-for-a-button-created-dynamically-using-jquery
+var count = 0;
+$(document).on("click", "#x", function() {
+  /*var div = $('<button id="btn"></button>');
+  div.html();
+  div.appendTo('#serie');*/
+  gagnant();
 });
-
-$(document).on("click", "#btn", function(){
-     var div = $('<button id="btn"></button>');
-    
-    div.html(count);
-    
-    div.appendTo('#serie');
-    
-    count = count + 1;
+$(document).on("click", "#btn", function() {
+  /*var div = $('<button id="btn"></button>');
+  div.html();
+  div.appendTo('#serie');*/
+  gagnant();
 });
-
 //Créer un bouton 
-function nButton(nombre) {
+/*function nButton(nombre) {
   /*for (var i = 0; i < tours; i++) {
     var btn = document.createElement("BUTTON");
     if (i === numr) {
@@ -43,29 +43,16 @@ function nButton(nombre) {
       btn.id = "b";
       serie.appendChild(btn);
     }
-  }*/
-  var count = 1;
-
-$('#btn').click(function(){
-
-    var div = $('<button id="btn"></button>');
-    
-    div.html(count);
-    
-    div.appendTo('#wrapper');
-    
-    count = count + 1;
-
-});
-}
+  }
+}*/
 
 //Enlèver un boutton 
-function rButton() {
+/*function rButton() {
   var parent = serie.getElementById("serie");
   var child = document.getElementById("b");
   parent.removeChild(child);
 }
-
+*/
 
 function initUI() {
   rnd();
@@ -134,6 +121,6 @@ function ver() {
   }
 }
 
-window.addEventListener("load", initUI);
+//window.addEventListener("load", initUI);
 //document.getElementsByClassName("bu").addEventListener("click", ver);
-document.getElementById("b").addEventListener("click", ver);
+//document.getElementById("b").addEventListener("click", ver);
