@@ -16,99 +16,122 @@ serie = document.getElementById("serie");
 argent = a;
 pointage = a * 100;
 
+$(document).ready(function(){
+
+});
+
+$(document).on("click", "#btn", function(){
+     var div = $('<button id="btn"></button>');
+    
+    div.html(count);
+    
+    div.appendTo('#serie');
+    
+    count = count + 1;
+});
+
 //Créer un bouton 
 function nButton(nombre) {
-    for (var i = 0; i < tours; i++) {
-       var btn = document.createElement("BUTTON");
-        if (i === numr) {
-            btn.className = "x";
-            btn.id = "b";
-            serie.appendChild(btn);
-        }
-        else {
-            btn.className = "bu";
-            btn.id = "b";
-            serie.appendChild(btn);
-        }
+  /*for (var i = 0; i < tours; i++) {
+    var btn = document.createElement("BUTTON");
+    if (i === numr) {
+      btn.className = "x";
+      btn.id = "b";
+      serie.appendChild(btn);
+    } else {
+      btn.className = "bu";
+      btn.id = "b";
+      serie.appendChild(btn);
     }
-}
+  }*/
+  var count = 1;
 
+$('#btn').click(function(){
+
+    var div = $('<button id="btn"></button>');
+    
+    div.html(count);
+    
+    div.appendTo('#wrapper');
+    
+    count = count + 1;
+
+});
+}
 
 //Enlèver un boutton 
 function rButton() {
-    var parent = serie.getElementById("serie");
-    var child = document.getElementById("b");
-    parent.removeChild(child);
+  var parent = serie.getElementById("serie");
+  var child = document.getElementById("b");
+  parent.removeChild(child);
 }
 
 
 function initUI() {
-    rnd();
-    nButton(numr);
-    trigger();
+  rnd();
+  nButton(numr);
+  trigger();
 }
 //Choisi un nombre entier au hazard entre 1 et tours 
 function rnd() {
-    numr = Math.floor((Math.random() * tours) + 0);
+  numr = Math.floor((Math.random() * tours) + 0);
 }
 //Commence rnd 
 function start() {
-    rnd();
+  rnd();
 }
 //Commence start si pointage et plus grand ou égal à 100 
 function trigger() {
-    if (pointage >= 100) {
-        start();
-    }
+  if (pointage >= 100) {
+    start();
+  }
 }
 
 function gagnant() {
-    //Multiplier la valeur par 0.4 
-    argent = argent * 0.4;
-    //Décision continuer 
-    var r = confirm("Voulez-vous essayer vos chances encore?");
-    if (r ===true) {
-        sys = "Charger";
-        tours++;
-        numr++;
-        initUI();
-    } else {
-        sys = "Fermer";
-    }
+  //Multiplier la valeur par 0.4 
+  argent = argent * 0.4;
+  //Décision continuer 
+  var r = confirm("Voulez-vous essayer vos chances encore?");
+  if (r === true) {
+    sys = "Charger";
+    tours++;
+    numr++;
+    initUI();
+  } else {
+    sys = "Fermer";
+  }
 }
 
 function perdant() {
-    //Multiplier la valeur par 0.45 
-    argent = argent * 0.45;
-    //Pas d'argent? 
-    if (argent <= 0) {
-        sys = "Fermer";
+  //Multiplier la valeur par 0.45 
+  argent = argent * 0.45;
+  //Pas d'argent? 
+  if (argent <= 0) {
+    sys = "Fermer";
+  } else {
+    //Décision continuer 
+    var r = confirm("Voulez-vous essayer vos chances encore?");
+    if (r === rue) {
+      sys = "Charger";
+      tours--;
+      numr--;
+      initUI();
+    } else {
+      sys = "Fermer";
     }
-    else {
-        //Décision continuer 
-        var r = confirm("Voulez-vous essayer vos chances encore?");
-        if (r === rue) {
-            sys = "Charger";
-            tours--;
-            numr--;
-            initUI();
-        } else {
-            sys = "Fermer";
-        }
-    }
+  }
 }
 
 //Verification 
 function ver() {
-    alert("HI!");
-    if (this.className === "x") {
-        gagnant();
-        alert("g");
-    }
-    else {
-        perdant();
-        alert("p");
-    }
+  alert("HI!");
+  if (this.className === "x") {
+    gagnant();
+    alert("g");
+  } else {
+    perdant();
+    alert("p");
+  }
 }
 
 window.addEventListener("load", initUI);
