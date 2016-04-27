@@ -1,19 +1,20 @@
 #btn {
-    height: 150px;
-    width: 100px;
-    margin: 15px;
+  height: 150px;
+  width: 100px;
+  margin: 15px;
 }
 
 .x {
-    height: 150px;
-    width: 100px;
-    margin: 15px;
+  height: 150px;
+  width: 100px;
+  margin: 15px;
 }
 
 #a {
-    display: none;
+  display: none;
 }
 
 #sys {
-    display: none;
+  display: none;
 }
+
