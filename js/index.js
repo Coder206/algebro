@@ -2,7 +2,7 @@ $(document).ready(function() {
   //Variables - argent 
   var a;
   var argent;
-  var pointage = 1;
+  var pointage;
 
   //Variables - jeu 
   var tours = 3;
@@ -17,9 +17,9 @@ $(document).ready(function() {
   argent = a;
   pointage = a * 100;
 
-  if (pointage => 100) {
+  if (pointage ==> 100) {
     numr = Math.floor((Math.random() * tours) + 0);
-
+		alert("hi")
     /*$(document).on("click", "#x", function() {
       /*var div = $('<button id="btn"></button>');
       div.html();
