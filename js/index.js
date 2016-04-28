@@ -27,8 +27,10 @@ $(document).ready(function() {
     if ($(this).is(".x")) {
       alert("X");
       gagnant();
+      numr = Math.floor((Math.random() * tours) + 0);
     } else {
       perdant();
+      numr = Math.floor((Math.random() * tours) + 0);
     }
   });
 
@@ -39,7 +41,7 @@ $(document).ready(function() {
     var r = confirm("Voulez-vous essayer vos chances encore?");
     if (r === true) {
       sys = "Charger";
-      tours = tours + 1;
+      tours++;
       nButton();
     } else {
       sys = "Fermer";
@@ -57,7 +59,7 @@ $(document).ready(function() {
       var r = confirm("Voulez-vous essayer vos chances encore?");
       if (r === rue) {
         sys = "Charger";
-        tours = tours - 1;
+        tours--;
         rButton();
       } else {
         sys = "Fermer";
@@ -66,7 +68,6 @@ $(document).ready(function() {
   }
 
   function nButton() {
-    numr = Math.floor((Math.random() * tours) + 0);
     $("button").remove();
     alert(numr);
     alert(tours);
@@ -82,6 +83,6 @@ $(document).ready(function() {
 
   function rButton() {
     $(".x").remove();
-    numr = Math.floor((Math.random() * tours) + 1);
   }
+
 });
