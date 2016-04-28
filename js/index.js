@@ -23,6 +23,7 @@ $(document).ready(function() {
   }
 
   $("button").click(function() {
+    alert("hi");
     if ($(this).is(".x")) {
       alert("X");
       gagnant();
@@ -65,11 +66,13 @@ $(document).ready(function() {
   }
 
   function nButton() {
-    numr = Math.floor((Math.random() * tours) + 1);
-		$("#btn").remove();
+    numr = Math.floor((Math.random() * tours) + 0);
+    $("button").remove();
+    alert(numr);
+    alert(tours);
     for (var i = 0; i < tours; i++) {
       if (i === numr) {
-        $('<button id="btn"></button>').addClass("x").appendTo("#serie");
+        $('<button id="btn" class="x"></button>').appendTo('#serie');
       } else {
         $('<button id="btn"></button>').appendTo('#serie');
       }
