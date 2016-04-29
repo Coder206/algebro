@@ -29,7 +29,8 @@ $(document).ready(function () {
       gagnant();
       numr = Math.floor((Math.random() * tours) + 0);
     } else {
-      perdant();
+      alert("O");
+      gagnant();
       numr = Math.floor((Math.random() * tours) + 0);
     }
   });
@@ -49,6 +50,7 @@ $(document).ready(function () {
   }
 
   function perdant() {
+    alert("perdant");
     //Multiplier la valeur par 0.45 
     argent = argent * 0.45;
     //Pas d'argent? 
@@ -82,6 +84,7 @@ $(document).ready(function () {
   }
 
   function rButton() {
+    alert("-1")
     $(".x").remove();
   }
 
