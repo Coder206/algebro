@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function () {
   //Variables - argent 
   var a;
   var argent;
@@ -22,7 +22,7 @@ $(document).ready(function() {
     nButton();
   }
 
-  $("button").click(function() {
+  $("body").on("click", "button", function () {
     alert("hi");
     if ($(this).is(".x")) {
       alert("X");
