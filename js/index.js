@@ -30,7 +30,8 @@ $(document).ready(function () {
       numr = Math.floor((Math.random() * tours) + 0);
     } else {
       alert("O");
-      gagnant();
+      $(this).remove();
+      perdant();
       numr = Math.floor((Math.random() * tours) + 0);
     }
   });
@@ -51,6 +52,7 @@ $(document).ready(function () {
 
   function perdant() {
     alert("perdant");
+    tours--;
     //Multiplier la valeur par 0.45 
     argent = argent * 0.45;
     //Pas d'argent? 
@@ -61,7 +63,7 @@ $(document).ready(function () {
       var r = confirm("Voulez-vous essayer vos chances encore?");
       if (r === rue) {
         sys = "Charger";
-        tours--;
+        alert(tours)
         rButton();
       } else {
         sys = "Fermer";
@@ -84,7 +86,7 @@ $(document).ready(function () {
   }
 
   function rButton() {
-    alert("-1")
+    alert("-1");
     $(".x").remove();
   }
 
