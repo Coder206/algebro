@@ -37,8 +37,9 @@ $(document).ready(function () {
   });
 
   function gagnant() {
-    numr = Math.floor((Math.random() * tours) + 1);
+alert("rnd");
           tours++;
+              numr = Math.floor((Math.random() * tours) + 1);
     //Multiplier la valeur par 0.4 
     argent = argent * 0.4;
       nButton();
@@ -54,9 +55,10 @@ $(document).ready(function () {
   }
 
   function perdant() {
-    numr = Math.floor((Math.random() * tours) + 1);
+alert("rnd");
     //alert("perdant");
     tours--;
+        numr = Math.floor((Math.random() * tours) + 1);
     rButton();
     //Multiplier la valeur par 0.45 
     argent = argent * 0.45;
