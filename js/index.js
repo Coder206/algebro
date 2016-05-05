@@ -81,7 +81,7 @@ $(document).ready(function () {
     for (var i = 0; i < tours; i++) {
       if (i === numr) {
         var btn = document.createElement("BUTTON");
-        btn.className = "x";
+        btn.setAttribute("class", "x");
         btn.setAttribute("id", "btn");
     document.body.appendChild(btn);
         //$(document.createElement('button'));
