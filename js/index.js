@@ -82,12 +82,14 @@ $(document).ready(function () {
       if (i === numr) {
         var btn = document.createElement("BUTTON");
         btn.className = "x";
+        btn.setAttribute("id", "btn");
     document.body.appendChild(btn);
         //$(document.createElement('button'));
         //$('<button id="btn" class="x"></button>').appendTo('#serie');
       } else {
         var btn = document.createElement("BUTTON");
     document.body.appendChild(btn);
+            btn.setAttribute("id", "btn");
         //$('<button id="btn"></button>').appendTo('#serie');
         $(document.createElement('button'));
       }
