@@ -37,26 +37,29 @@ $(document).ready(function () {
   });
 
   function gagnant() {
+          tours++;
     //Multiplier la valeur par 0.4 
     argent = argent * 0.4;
+      nButton();
     //Décision continuer 
-    var r = confirm("Voulez-vous essayer vos chances encore?");
+    /*var r = confirm("Voulez-vous essayer vos chances encore?");
     if (r === true) {
       sys = "Charger";
-      tours++;
+            tours++;
       nButton();
     } else {
       sys = "Fermer";
-    }
+    }*/
   }
 
   function perdant() {
     //alert("perdant");
     tours--;
+    rButton();
     //Multiplier la valeur par 0.45 
     argent = argent * 0.45;
     //Pas d'argent? 
-    if (argent <= 0) {
+    /*if (argent <= 0) {
       sys = "Fermer";
     } else {
       //Décision continuer 
@@ -67,7 +70,7 @@ $(document).ready(function () {
         rButton();
       } else {
         sys = "Fermer";
-      }
+      }*/
     }
   }
 
@@ -77,11 +80,9 @@ $(document).ready(function () {
     //alert(tours);
     for (var i = 0; i < tours; i++) {
       if (i === numr) {
-        alert("nouveau");
         $(document.createElement('button'));
         $('<button id="btn" class="x"></button>').appendTo('#serie');
       } else {
-        alert("nouveau");
         $('<button id="btn"></button>').appendTo('#serie');
         $(document.createElement('button'));
       }
