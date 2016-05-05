@@ -37,6 +37,7 @@ $(document).ready(function () {
   });
 
   function gagnant() {
+    numr = Math.floor((Math.random() * tours) + 1);
           tours++;
     //Multiplier la valeur par 0.4 
     argent = argent * 0.4;
@@ -53,6 +54,7 @@ $(document).ready(function () {
   }
 
   function perdant() {
+    numr = Math.floor((Math.random() * tours) + 1);
     //alert("perdant");
     tours--;
     rButton();
@@ -81,9 +83,9 @@ $(document).ready(function () {
     for (var i = 0; i < tours; i++) {
       if (i === numr) {
         $(document.createElement('button'));
-        $('<button id="btn" class="x"></button>').appendTo('#serie');
+        //$('<button id="btn" class="x"></button>').appendTo('#serie');
       } else {
-        $('<button id="btn"></button>').appendTo('#serie');
+        //$('<button id="btn"></button>').appendTo('#serie');
         $(document.createElement('button'));
       }
 
