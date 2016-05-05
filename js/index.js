@@ -39,8 +39,8 @@ $(document).ready(function () {
   function gagnant() {
           tours++;
     //Multiplier la valeur par 0.4 
+          nButton();
     argent = argent * 0.4;
-      nButton();
     //Décision continuer 
     /*var r = confirm("Voulez-vous essayer vos chances encore?");
     if (r === true) {
