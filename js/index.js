@@ -23,13 +23,13 @@ $(document).ready(function () {
   }
 
   $("body").on("click", "button", function () {
-    alert("hi");
+    //alert("hi");
     if ($(this).is(".x")) {
-      alert("X");
+      //alert("X");
       gagnant();
       numr = Math.floor((Math.random() * tours) + 0);
     } else {
-      alert("O");
+      //alert("O");
       $(this).remove();
       perdant();
       numr = Math.floor((Math.random() * tours) + 0);
@@ -51,7 +51,7 @@ $(document).ready(function () {
   }
 
   function perdant() {
-    alert("perdant");
+    //alert("perdant");
     tours--;
     //Multiplier la valeur par 0.45 
     argent = argent * 0.45;
@@ -63,7 +63,7 @@ $(document).ready(function () {
       var r = confirm("Voulez-vous essayer vos chances encore?");
       if (r === rue) {
         sys = "Charger";
-        alert(tours)
+        //alert(tours)
         rButton();
       } else {
         sys = "Fermer";
@@ -73,8 +73,8 @@ $(document).ready(function () {
 
   function nButton() {
     $("button").remove();
-    alert(numr);
-    alert(tours);
+   // alert(numr);
+    //alert(tours);
     for (var i = 0; i < tours; i++) {
       if (i === numr) {
         $('<button id="btn" class="x"></button>').appendTo('#serie');
