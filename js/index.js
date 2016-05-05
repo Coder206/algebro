@@ -70,8 +70,8 @@ $(document).ready(function () {
         rButton();
       } else {
         sys = "Fermer";
-      }*/
-    }
+      }
+    }*/
   }
 
   function nButton() {
