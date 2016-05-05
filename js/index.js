@@ -91,7 +91,7 @@ $(document).ready(function () {
   }
 
   function rButton() {
-    alert("-1");
+    //alert("-1");
     $(".x").remove();
   }
 
