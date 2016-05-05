@@ -77,9 +77,11 @@ $(document).ready(function () {
     //alert(tours);
     for (var i = 0; i < tours; i++) {
       if (i === numr) {
+        alert("nouveau");
         $(document.createElement('button'));
         $('<button id="btn" class="x"></button>').appendTo('#serie');
       } else {
+        alert("nouveau");
         $('<button id="btn"></button>').appendTo('#serie');
         $(document.createElement('button'));
       }
