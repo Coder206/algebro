@@ -75,7 +75,7 @@ $(document).ready(function () {
   }
 
   function nButton() {
-    $("button").remove();
+    //$("button").remove();
    // alert(numr);
     //alert(tours);
     for (var i = 0; i < tours; i++) {
