@@ -99,7 +99,7 @@ $(document).ready(function () {
 
   function rButton() {
     //alert("-1");
-    //$(".x").remove();
+    $(".x").remove();
   }
 
 });
