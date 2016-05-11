@@ -70,7 +70,7 @@ $(document).ready(function () {
   }
 
   function nButton() {
-    $("button").remove();
+    //$("button").remove();
    // alert(numr);
     //alert(tours);
     numr = Math.floor((Math.random() * tours) + 0);
