@@ -27,11 +27,9 @@ $(document).ready(function () {
     if ($(this).is(".x")) {
       //alert("X");
       gagnant();
-      numr = Math.floor((Math.random() * tours) + 0);
     } else {
       //alert("O");
       perdant();
-      numr = Math.floor((Math.random() * tours) + 0);
     }
   });
 
@@ -75,6 +73,7 @@ $(document).ready(function () {
     $("button").remove();
    // alert(numr);
     //alert(tours);
+    numr = Math.floor((Math.random() * tours) + 0);
     for (var i = 0; i < tours; i++) {
       if (i === numr) {
         var btn = document.createElement("BUTTON");
