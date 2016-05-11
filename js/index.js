@@ -76,16 +76,18 @@ $(document).ready(function () {
     numr = Math.floor((Math.random() * tours) + 0);
     for (var i = 0; i < tours; i++) {
       if (i === numr) {
-        var btn = document.createElement("BUTTON");
+        document.write("<BUTTON id='btn' class='x'></BUTTON>");
+        /*var btn = document.createElement("BUTTON");
         btn.setAttribute("class", "x");
         btn.setAttribute("id", "btn");
-    document.getElementById("serie").appendChild(btn);
+    document.getElementById("serie").appendChild(btn);*/
         //$(document.createElement('button'));
         //$('<button id="btn" class="x"></button>').appendTo('#serie');
       } else {
-        var btn = document.createElement("BUTTON");
+        document.write("<BUTTON id='btn'></BUTTON>");
+        /*var btn = document.createElement("BUTTON");
     document.getElementById("serie").appendChild(btn);
-            btn.setAttribute("id", "btn");
+            btn.setAttribute("id", "btn");*/
         //$('<button id="btn"></button>').appendTo('#serie');
         $(document.createElement('button'));
       }
