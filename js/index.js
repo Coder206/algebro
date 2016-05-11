@@ -37,7 +37,6 @@ $(document).ready(function () {
   });
 
   function gagnant() {
-          tours++;
     //Multiplier la valeur par 0.4 
           nButton();
     argent = argent * 0.4;
