@@ -53,8 +53,6 @@ $(document).ready(function () {
 
   function perdant() {
     //alert("perdant");
-    tours--;
-    rButton();
     //Multiplier la valeur par 0.45 
     argent = argent * 0.45;
     //Pas d'argent? 
@@ -94,11 +92,6 @@ $(document).ready(function () {
       }
 
     }
-  }
-
-  function rButton() {
-    //alert("-1");
-    //$(".x").remove();
   }
 
 });
