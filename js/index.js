@@ -30,7 +30,6 @@ $(document).ready(function () {
       numr = Math.floor((Math.random() * tours) + 0);
     } else {
       //alert("O");
-      $(this).remove();
       perdant();
       numr = Math.floor((Math.random() * tours) + 0);
     }
