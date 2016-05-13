@@ -1,25 +1,24 @@
-window.$ = window.jQuery = require('https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js');
 $(document).ready(function () {
-  //Variables - argent 
+  //Variables - argent
   var a;
   var argent;
   var pointage;
 
-  //Variables - jeu 
+  //Variables - jeu
   var tours = 3;
   var numr = 0;
 
-  //DOM 
+  //DOM
   a = document.getElementById("a").textContent;
   sys = document.getElementById("sys").textContent;
   serie = document.getElementById("serie");
 
-  //Défini argent 
+  //Défini argent
   argent = a;
   pointage = a * 100;
 
   if (pointage >= 100) {
-    numr = Math.floor((Math.random() * (tours-1)) + 1);
+    numr = Math.floor((Math.random() * tours) + 1);
     nButton();
   }
 
@@ -28,18 +27,21 @@ $(document).ready(function () {
     if ($(this).is(".x")) {
       //alert("X");
       gagnant();
+      numr = Math.floor((Math.random() * tours) + 0);
     } else {
       //alert("O");
+      $(this).remove();
       perdant();
+      numr = Math.floor((Math.random() * tours) + 0);
     }
   });
 
   function gagnant() {
-    //Multiplier la valeur par 0.4 
-    tours++;
+          tours++;
+    //Multiplier la valeur par 0.4
           nButton();
     argent = argent * 0.4;
-    //Décision continuer 
+    //Décision continuer
     /*var r = confirm("Voulez-vous essayer vos chances encore?");
     if (r === true) {
       sys = "Charger";
@@ -52,13 +54,15 @@ $(document).ready(function () {
 
   function perdant() {
     //alert("perdant");
-    //Multiplier la valeur par 0.45 
+    tours--;
+    rButton();
+    //Multiplier la valeur par 0.45
     argent = argent * 0.45;
-    //Pas d'argent? 
+    //Pas d'argent?
     /*if (argent <= 0) {
       sys = "Fermer";
     } else {
-      //Décision continuer 
+      //Décision continuer
       var r = confirm("Voulez-vous essayer vos chances encore?");
       if (r === rue) {
         sys = "Charger";
@@ -71,29 +75,31 @@ $(document).ready(function () {
   }
 
   function nButton() {
-    //$("button").remove();
+    $("button").remove();
    // alert(numr);
     //alert(tours);
-    numr = Math.floor((Math.random() * tours) + 0);
     for (var i = 0; i < tours; i++) {
       if (i === numr) {
-        document.write("<BUTTON id='btn' class='x'></BUTTON>");
-        /*var btn = document.createElement("BUTTON");
+        var btn = document.createElement("BUTTON");
         btn.setAttribute("class", "x");
         btn.setAttribute("id", "btn");
-    document.getElementById("serie").appendChild(btn);*/
+    document.body.appendChild(btn);
         //$(document.createElement('button'));
         //$('<button id="btn" class="x"></button>').appendTo('#serie');
       } else {
-        document.write("<BUTTON id='btn'></BUTTON>");
-        /*var btn = document.createElement("BUTTON");
-    document.getElementById("serie").appendChild(btn);
-            btn.setAttribute("id", "btn");*/
+        var btn = document.createElement("BUTTON");
+    document.body.appendChild(btn);
+            btn.setAttribute("id", "btn");
         //$('<button id="btn"></button>').appendTo('#serie');
         $(document.createElement('button'));
       }
 
     }
+  }
+
+  function rButton() {
+    //alert("-1");
+    //$(".x").remove();
   }
 
 });
