@@ -1,3 +1,4 @@
+window.$ = window.jQuery = require('https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js');
 $(document).ready(function () {
   //Variables - argent 
   var a;
