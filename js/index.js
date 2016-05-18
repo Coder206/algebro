@@ -12,7 +12,9 @@ $(document).ready(function () {
   a = document.getElementById("a").textContent;
   sys = document.getElementById("sys").textContent;
   serie = document.getElementById("serie");
-
+ //Input argent
+ <input type = "value" id="NewArgent" value= "argent">;
+<input type="text" id="myText" value="3">;
   //Défini argent
   argent = a;
   pointage = a * 100;
@@ -22,7 +24,7 @@ $(document).ready(function () {
     nButton();
   }
 
-  $("body").on("click", "button", function () {
+  $("body").on("click", "button", function ()
     //alert("hi");
     if ($(this).is(".x")) {
       //alert("X");
@@ -34,6 +36,15 @@ $(document).ready(function () {
       perdant();
       numr = Math.floor((Math.random() * tours) + 0);
     }
+  function myMoney()
+      var adj = document.getElementById("myText").value;
+      If gagnant();{
+        argent + adj;
+      } else {
+        argent - adj;
+      }
+      document.getElementById("demo").innerHTML = var x ;
+  }
   });
 
   function gagnant() {
@@ -101,5 +112,6 @@ $(document).ready(function () {
     //alert("-1");
     //$(".x").remove();
   }
+
 
 });
