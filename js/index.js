@@ -73,7 +73,6 @@ $(document).ready(function () {
       }
     }*/
   }
-
   function nButton() {
     $("button").remove();
    // alert(numr);
@@ -102,4 +101,8 @@ $(document).ready(function () {
     //$(".x").remove();
   }
 
+  function Gamble() {
+    var x = document.getElementById("myText").value;
+    document.getElementById("demo").innerHTML = x;
+}
 });
