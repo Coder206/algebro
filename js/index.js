@@ -26,13 +26,13 @@ $(document).ready(function () {
     //alert("hi");
     if ($(this).is(".x")) {
       //alert("X");
+            numr = Math.floor((Math.random() * tours) + 0);
       gagnant();
-      numr = Math.floor((Math.random() * tours) + 0);
     } else {
       //alert("O");
       //$(this).remove();
+            numr = Math.floor((Math.random() * tours) + 0);
       perdant();
-      numr = Math.floor((Math.random() * tours) + 0);
     }
   });
 
