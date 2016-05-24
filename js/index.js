@@ -54,8 +54,7 @@ $(document).ready(function () {
 
   function perdant() {
     //alert("perdant");
-    tours--;
-    rButton();
+    nButton();
     //Multiplier la valeur par 0.45
     argent = argent * 0.45;
     //Pas d'argent?
