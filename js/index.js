@@ -18,7 +18,7 @@ $(document).ready(function () {
   pointage = a * 100;
 
   if (pointage >= 100) {
-    numr = Math.floor((Math.random() * tours) + 1);
+    //numr = Math.floor((Math.random() * tours) + 1);
     nButton();
   }
 
