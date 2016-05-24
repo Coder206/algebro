@@ -27,12 +27,12 @@ $(document).ready(function () {
     if ($(this).is(".x")) {
       //alert("X");
       gagnant();
-      //numr = Math.floor((Math.random() * tours) + 0);
+      numr = Math.floor((Math.random() * tours) + 0);
     } else {
       //alert("O");
       //$(this).remove();
       perdant();
-      //numr = Math.floor((Math.random() * tours) + 0);
+      numr = Math.floor((Math.random() * tours) + 0);
     }
   });
 
