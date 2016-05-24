@@ -30,7 +30,7 @@ $(document).ready(function () {
       numr = Math.floor((Math.random() * tours) + 0);
     } else {
       //alert("O");
-      $(this).remove();
+      //$(this).remove();
       perdant();
       numr = Math.floor((Math.random() * tours) + 0);
     }
@@ -101,8 +101,8 @@ $(document).ready(function () {
     //$(".x").remove();
   }
 
-  function Gamble() {
-    var x = document.getElementById("myText").value;
-    document.getElementById("demo").innerHTML = x;
+  function gamble() {
+    var adj = document.getElementById("myText").value;
+    document.getElementById("demo").innerHTML = adj;
 }
 });
