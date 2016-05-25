@@ -62,7 +62,13 @@ $(document).ready(function() {
 
     function pariG() {
         var money = document.getElementById("myText").value
+        alert(a);
+        alert(argent);
+        alert(money);
         a = argent + money;
+        alert(a);
+        alert(argent);
+        alert(money);
     }
 
     function pariP() {
