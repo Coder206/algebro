@@ -22,14 +22,10 @@ $(document).ready(function() {
     }
 
     $("body").on("click", "button", function() {
-        //alert("hi");
         if ($(this).is(".x")) {
-            //alert("X");
             numr = Math.floor((Math.random() * tours) + 0);
             gagnant();
         } else {
-            //alert("O");
-            //$(this).remove();
             numr = Math.floor((Math.random() * tours) + 0);
             perdant();
         }
@@ -38,44 +34,16 @@ $(document).ready(function() {
     function gagnant() {
         pariG();
         tours++;
-        //Multiplier la valeur par 0.4
         nButton();
-        //Décision continuer
-        /*var r = confirm("Voulez-vous essayer vos chances encore?");
-        if (r === true) {
-          sys = "Charger";
-                tours++;
-          nButton();
-        } else {
-          sys = "Fermer";
-        }*/
     }
 
     function perdant() {
         pariP();
-        //alert("perdant");
         nButton();
-        //Multiplier la valeur par 0.45
-        //Pas d'argent?
-        /*if (argent <= 0) {
-          sys = "Fermer";
-        } else {
-          //Décision continuer
-          var r = confirm("Voulez-vous essayer vos chances encore?");
-          if (r === rue) {
-            sys = "Charger";
-            //alert(tours)
-            rButton();
-          } else {
-            sys = "Fermer";
-          }
-        }*/
     }
 
     function nButton() {
         $("button").remove();
-        // alert(numr);
-        //alert(tours);
         for (var i = 0; i < tours; i++) {
             if (i === numr) {
                 var btn = document.createElement("BUTTON");
