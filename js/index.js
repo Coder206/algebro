@@ -37,6 +37,7 @@ $(document).ready(function () {
   });
 
   function gagnant() {
+    pariG();
           tours++;
     //Multiplier la valeur par 0.4
           nButton();
@@ -53,6 +54,7 @@ $(document).ready(function () {
   }
 
   function perdant() {
+    pariP();
     //alert("perdant");
     nButton();
     //Multiplier la valeur par 0.45
@@ -96,5 +98,9 @@ $(document).ready(function () {
 function pariG() {
   document.getElementById("myText").value = tours;
   a = argent + tours;
+}
+function pariP() {
+  document.getElementById("myText").value = tours;
+  a = argent - tours;
 }
 });
