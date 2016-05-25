@@ -96,11 +96,11 @@ $(document).ready(function () {
   }
 
 function pariG() {
-  document.getElementById("myText").value = tours;
-  a = argent + tours;
+  var money = document.getElementById("myText").value
+  a = argent + money;
 }
 function pariP() {
-  document.getElementById("myText").value = tours;
-  a = argent - tours;
+  var money = document.getElementById("myText").value
+  a = argent - money;
 }
 });
