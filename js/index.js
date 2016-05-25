@@ -15,9 +15,8 @@ $(document).ready(function () {
 
   //Défini argent
   argent = a;
-  pointage = a * 100;
 
-  if (pointage >= 100) {
+  if (argent >= 3) {
     numr = Math.floor((Math.random() * tours) + 1);
     nButton();
   }
