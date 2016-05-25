@@ -73,6 +73,7 @@ $(document).ready(function () {
     }*/
   }
   function nButton() {
+    pariG();
     $("button").remove();
    // alert(numr);
     //alert(tours);
@@ -81,15 +82,8 @@ $(document).ready(function () {
         var btn = document.createElement("BUTTON");
         btn.setAttribute("class", "x");
         btn.setAttribute("id", "btn");
-    document.getElementById("jeux").appendChild(btn);
-        //$(document.createElement('button'));
-        //$('<button id="btn" class="x"></button>').appendTo('#serie');
+        document.getElementById("jeux").appendChild(btn);
       } else {
-        /*var btn = document.createElement("BUTTON");
-    document.getElementById("jeux").appendChild(btn);
-            btn.setAttribute("id", "btn");
-        //$('<button id="btn"></button>').appendTo('#serie');
-        $(document.createElement('button'));*/
         var btn = document.createElement("BUTTON");
         btn.setAttribute("class", "o");
         btn.setAttribute("id", "btn");
@@ -99,13 +93,8 @@ $(document).ready(function () {
     }
   }
 
-  function rButton() {
-    //alert("-1");
-    //$(".x").remove();
-  }
-
-  function gamble() {
-    var adj = document.getElementById("myText").value;
-    document.getElementById("demo").innerHTML = adj;
+function pariG() {
+  document.getElementById("myText").value = tours;
+  a = argent + tours;
 }
 });
