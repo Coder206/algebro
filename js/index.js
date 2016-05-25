@@ -74,3 +74,4 @@ $(document).ready(function() {
     function pariP() {
         var money = document.getElementById("myText").value
         a = argent - money;
+    }
