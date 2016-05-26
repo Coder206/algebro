@@ -75,3 +75,4 @@ $(document).ready(function() {
         var money = document.getElementById("myText").value
         a = argent - money;
     }
+});
