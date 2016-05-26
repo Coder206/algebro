@@ -6,6 +6,7 @@ $(document).ready(function() {
 
     //Variables - jeu
     var tours = 3;
+    var t;
     var numr = 0;
 
     //DOM
@@ -17,7 +18,8 @@ $(document).ready(function() {
     argent = a;
 
     function rnd() {
-        numr = Math.floor((Math.random() * (tours - 1)) + 0);
+        t = tours - 1;
+        numr = Math.floor((Math.random() * tours) + 0);
     }
     
     if (argent >= 3) {
