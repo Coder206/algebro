@@ -19,7 +19,7 @@ $(document).ready(function() {
 
     function rnd() {
         t = tours - 1;
-        return Math.random() * (t - 0) + 0;
+        numr = Math.random() * (t - 0) + 0;
         alert(numr);
     }
     
