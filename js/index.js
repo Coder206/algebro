@@ -1,18 +1,14 @@
 $(document).ready(function() {
-    //Variables - argent
-    var a;
-    var argent;
-    var pointage;
-
     //Variables - jeu
     var tours = 3;
     var t;
     var numr = 0;
 
     //DOM
-    a = document.getElementById("a").textContent;
-    sys = document.getElementById("sys").textContent;
-    serie = document.getElementById("serie");
+    var a = document.getElementById("a").textContent;
+    var sys = document.getElementById("sys").textContent;
+    var serie = document.getElementById("serie");
+    var money = document.getElementById("myText").value
 
     //Défini argent
     argent = a;
@@ -21,7 +17,6 @@ $(document).ready(function() {
         t = tours - 1;
         numr = Math.random() * (t - 0) + 0;
         numr = Math.round(numr);
-        alert(numr);
     }
     
     if (argent >= 3) {
@@ -69,18 +64,10 @@ $(document).ready(function() {
     }
 
     function pariG() {
-        var money = document.getElementById("myText").value
-        alert(a);
-        alert(argent);
-        alert(money);
-        a = argent + money;
-        alert(a);
-        alert(argent);
-        alert(money);
+        document.getElementById("a").textContent = argent + money;
     }
 
     function pariP() {
-        var money = document.getElementById("myText").value
-        a = argent - money;
+        document.getElementById("a").textContent = argent - money;
     }
 });
