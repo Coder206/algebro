@@ -65,11 +65,10 @@ $(document).ready(function() {
     }
 
     function pariG() {
-        aa = parseInt(argent) + parseInt(money);
-        alert (aa);
+        document.getElementById("a").textContent = parseInt(argent) + parseInt(money);
     }
 
     function pariP() {
-        aa = parseInt(argent) - parseInt(money);
+        document.getElementById("a").textContent = parseInt(argent) - parseInt(money);
     }
 });
