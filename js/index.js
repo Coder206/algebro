@@ -9,7 +9,7 @@ $(document).ready(function() {
     var a = document.getElementById("a").textContent;
     var sys = document.getElementById("sys").textContent;
     var serie = document.getElementById("serie");
-    var money = document.getElementById("myText").value
+    var money = document.getElementById("myText").value;
 
     //Défini argent
     argent = a;
@@ -21,7 +21,7 @@ $(document).ready(function() {
     }
     
     function updateTb() {
-        money = tours;
+        document.getElementById("myText").value = tours;
     }
     
     if (argent >= 3) {
