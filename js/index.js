@@ -64,10 +64,10 @@ $(document).ready(function() {
     }
 
     function pariG() {
-        parseInt(a) = parseInt(argent) + parseInt(money);
+        a = parseInt(argent) + parseInt(money);
     }
 
     function pariP() {
-        parseInt(a) = parseInt(argent) - parseInt(money);
+        a = parseInt(argent) - parseInt(money);
     }
 });
