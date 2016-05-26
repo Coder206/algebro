@@ -64,7 +64,8 @@ $(document).ready(function() {
     }
 
     function pariG() {
-        document.getElementById("a").textContent = argent + money;
+        parseInt(document.getElementById("a").textContent) = argent + money;
+        alert(a);
     }
 
     function pariP() {
