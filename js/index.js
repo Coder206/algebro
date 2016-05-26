@@ -43,6 +43,7 @@ $(document).ready(function() {
     }
 
     function nButton() {
+        alert(numr);
         $("button").remove();
         for (var i = 0; i < tours; i++) {
             if (i === numr) {
