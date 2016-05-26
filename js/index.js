@@ -64,11 +64,12 @@ $(document).ready(function() {
     }
 
     function pariG() {
-        parseInt(a) = parseInt(argent) + parseInt(money)
+        parseInt(a) = parseInt(argent) + parseInt(money);
         alert(a);
     }
 
     function pariP() {
-        parseInt(document.getElementById("a").textContent = argent - money);
+        parseInt(a) = parseInt(argent) - parseInt(money);
+        alert(a);
     }
 });
