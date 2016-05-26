@@ -3,6 +3,7 @@ $(document).ready(function() {
     var tours = 3;
     var t;
     var numr = 0;
+    var aa;
 
     //DOM
     var a = document.getElementById("a").textContent;
@@ -64,10 +65,11 @@ $(document).ready(function() {
     }
 
     function pariG() {
-        a = parseInt(argent) + parseInt(money);
+        aa = parseInt(a) + parseInt(money);
+        alert (aa);
     }
 
     function pariP() {
-        a = parseInt(argent) - parseInt(money);
+        aa = parseInt(a) - parseInt(money);
     }
 });
