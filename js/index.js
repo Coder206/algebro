@@ -34,7 +34,8 @@ $(document).ready(function() {
             rnd();
             gagnant();
             updateTb();
-        } else {
+        } else if ($(this).is(".o")) {
+            alert();
             rnd();
             perdant();
             updateTb();
