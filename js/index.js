@@ -25,6 +25,7 @@ $(document).ready(function() {
     }
 
     $("body").on("click", "button", function() {
+        alert();
         if ($(this).is(".x")) {
             rnd();
             gagnant();
