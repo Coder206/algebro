@@ -72,10 +72,10 @@ $(document).ready(function() {
     }
 
     function pariG() {
-        document.getElementById("a").textContent = parseInt(document.getElementById("a").textContent) + parseInt(money);
+        document.getElementById("a").textContent = parseInt(document.getElementById("a").textContent) + parseInt(document.getElementById("myText").value);
     }
 
     function pariP() {
-        document.getElementById("a").textContent = parseInt(document.getElementById("a").textContent) - parseInt(money);
+        document.getElementById("a").textContent = parseInt(document.getElementById("a").textContent) - parseInt(document.getElementById("myText").value);
     }
 });
