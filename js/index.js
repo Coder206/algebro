@@ -20,6 +20,7 @@ $(document).ready(function() {
     function rnd() {
         t = tours - 1;
         numr = Math.random() * (t - 0) + 0;
+        numr = Math.round(numr);
         alert(numr);
     }
     
