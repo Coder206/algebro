@@ -19,7 +19,8 @@ $(document).ready(function() {
 
     function rnd() {
         t = tours - 1;
-        numr = Math.floor((Math.random() * tours) + 0);
+        numr = Math.floor((Math.random() * t) + 0);
+        alert(numr);
     }
     
     if (argent >= 3) {
