@@ -20,6 +20,10 @@ $(document).ready(function() {
         numr = Math.round(numr);
     }
     
+    function updateTb() {
+        money = tours;
+    }
+    
     if (argent >= 3) {
         rnd();
         nButton();
@@ -29,9 +33,11 @@ $(document).ready(function() {
         if ($(this).is(".x")) {
             rnd();
             gagnant();
+            updateTb();
         } else {
             rnd();
             perdant();
+            updateTb();
         }
     });
 
