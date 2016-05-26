@@ -16,17 +16,21 @@ $(document).ready(function() {
     //Défini argent
     argent = a;
 
+    function rnd() {
+        numr = Math.floor((Math.random() * (tours - 1)) + 0);
+    }
+    
     if (argent >= 3) {
-        numr = Math.floor((Math.random() * tours) + 1);
+        rnd();
         nButton();
     }
 
     $("body").on("click", "button", function() {
         if ($(this).is(".x")) {
-            numr = Math.floor((Math.random() * tours) + 0);
+            rnd();
             gagnant();
         } else {
-            numr = Math.floor((Math.random() * tours) + 0);
+            rnd();
             perdant();
         }
     });
@@ -43,7 +47,6 @@ $(document).ready(function() {
     }
 
     function nButton() {
-        alert(numr);
         $("button").remove();
         for (var i = 0; i < tours; i++) {
             if (i === numr) {
