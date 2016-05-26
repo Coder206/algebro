@@ -25,7 +25,6 @@ $(document).ready(function() {
     }
 
     $("body").on("click", "button", function() {
-        alert();
         if ($(this).is(".x")) {
             rnd();
             gagnant();
@@ -36,14 +35,14 @@ $(document).ready(function() {
     });
 
     function gagnant() {
-        pariG();
         tours++;
         nButton();
+        pariG();
     }
 
     function perdant() {
-        pariP();
         nButton();
+        pariP();
     }
 
     function nButton() {
