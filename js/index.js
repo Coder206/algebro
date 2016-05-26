@@ -69,6 +69,6 @@ $(document).ready(function() {
     }
 
     function pariP() {
-        document.getElementById("a").textContent = argent - money;
+        parseInt(document.getElementById("a").textContent = argent - money);
     }
 });
