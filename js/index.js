@@ -27,6 +27,7 @@ $(document).ready(function() {
     if (argent >= 3) {
         rnd();
         nButton();
+        updateTb();
     }
 
     $("body").on("click", "button", function() {
