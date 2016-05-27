@@ -21,7 +21,9 @@ $(document).ready(function() {
     }
     
     function updateTb() {
+        document.getElementById("myText").min = tours;
         document.getElementById("myText").value = tours;
+        document.getElementById("myText").max = parseInt(document.getElementById("a").textContent);
     }
     
     if (argent >= 3) {
@@ -49,6 +51,7 @@ $(document).ready(function() {
     }
 
     function perdant() {
+        
         nButton();
         pariP();
     }
