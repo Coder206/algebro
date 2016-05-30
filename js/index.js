@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function () {
     //Variables - jeu
     var tours = 3;
     var t;
@@ -19,20 +19,29 @@ $(document).ready(function() {
         numr = Math.random() * (t - 0) + 0;
         numr = Math.round(numr);
     }
-    
+
     function updateTb() {
         document.getElementById("myText").min = tours;
         document.getElementById("myText").value = tours;
         document.getElementById("myText").max = parseInt(document.getElementById("a").textContent);
     }
-    
+
     if (argent >= 3) {
         rnd();
         nButton();
         updateTb();
     }
 
-    $("body").on("click", "button", function() {
+    $("input").change(function () {
+        if (document.getElementById("myText").value > parseInt(document.getElementById("a").textContent)) {
+            document.getElementById("myText").value = parseInt(document.getElementById("a").textContent);
+        }
+        if (document.getElementById("myText").value < 3) {
+            document.getElementById("myText").value = 3;
+        }
+    });
+
+    $("body").on("click", "button", function () {
         if ($(this).is(".x")) {
             rnd();
             gagnant();
@@ -51,7 +60,7 @@ $(document).ready(function() {
     }
 
     function perdant() {
-        
+
         nButton();
         pariP();
     }
