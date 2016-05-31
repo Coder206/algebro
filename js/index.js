@@ -43,17 +43,16 @@ $(document).ready(function () {
 
     $("body").on("click", "button", function () {
         if ($(this).is(".x")) {
-            rnd();
             gagnant();
             updateTb();
         } else if ($(this).is(".o")) {
-            rnd();
             perdant();
             updateTb();
         }
     });
 
     function gagnant() {
+        rnd();
         tours++;
         nButton();
         pariG();
