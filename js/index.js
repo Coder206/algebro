@@ -13,6 +13,8 @@ $(document).ready(function () {
 
     //Défini argent
     argent = a;
+    
+    chk();
 
     function rnd() {
         t = tours - 1;
@@ -26,10 +28,13 @@ $(document).ready(function () {
         document.getElementById("myText").max = parseInt(document.getElementById("a").textContent);
     }
 
+    function chk() {
+    
     if (argent >= 3) {
-        rnd();
         nButton();
         updateTb();
+    }
+    
     }
 
     $("input").change(function () {
@@ -52,6 +57,7 @@ $(document).ready(function () {
     });
 
     function gagnant() {
+        chk();
         rnd();
         tours++;
         nButton();
@@ -59,7 +65,7 @@ $(document).ready(function () {
     }
 
     function perdant() {
-
+        chk();
         nButton();
         pariP();
     }
