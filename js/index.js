@@ -23,6 +23,7 @@ $(document).ready(function () {
     }
 
     function updateTb() {
+        Va();
         document.getElementById("myText").min = tours;
         document.getElementById("myText").value = tours;
         document.getElementById("myText").max = parseInt(document.getElementById("a").textContent);
@@ -97,6 +98,6 @@ $(document).ready(function () {
     }
     
     function Va(){
-         document.getElementById("vA").textContent = parseInt(document.getElementById("a").textContent);
+        document.getElementById("a").textContent = document.getElementById("vA").textContent;
     }
 });
