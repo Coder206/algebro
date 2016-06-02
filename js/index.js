@@ -23,14 +23,13 @@ $(document).ready(function () {
     }
 
     function updateTb() {
-        Va();
         document.getElementById("myText").min = tours;
         document.getElementById("myText").value = tours;
         document.getElementById("myText").max = parseInt(document.getElementById("a").textContent);
     }
 
     function chk() {
-    
+    Va();
     if (argent >= 3) {
         nButton();
         updateTb();
