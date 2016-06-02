@@ -99,5 +99,4 @@ $(document).ready(function () {
     function Va(){
          document.getElementById("a").textContent = parseInt(document.getElementById("vA").textContent);
     }
-    }
 });
