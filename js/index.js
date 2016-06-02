@@ -97,6 +97,6 @@ $(document).ready(function () {
     }
     
     function Va(){
-        document.getElementById("a").textContent = document.getElementById("vA").textContent;
+        document.getElementById("a").textContent = parseInt(document.getElementById("vA").textContent);
     }
 });
