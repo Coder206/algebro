@@ -95,4 +95,9 @@ $(document).ready(function () {
     function pariP() {
         document.getElementById("a").textContent = parseInt(document.getElementById("a").textContent) - parseInt(document.getElementById("myText").value);
     }
+    
+    function Va(){
+         document.getElementById("a").textContent = parseInt(document.getElementById("vA").textContent);
+    }
+    }
 });
